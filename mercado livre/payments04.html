@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://data.mercadolibre.com" />
+    <link rel="preconnect" href="https://http2.mlstatic.com" />
+    <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+    <link rel="preconnect" href="https://analytics.mercadolivre.com.br" />
+    <link rel="preconnect" href="https://analytics.mercadolivre.com" />
+    <link rel="preconnect" href="https://www.google.com.br" />
+    <script id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">
+        [84, 4223, 7133, 7556, 6302, 4387, 2945, 2006, 7727, 8767, 1629, 8780, 8613, 931, 9338, 6672, 4919]
+    </script>
+    <script id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json">
+        {
+            "namedChunks": ["flox-custom-component-container", "flox-custom-component-header", "flox-custom-component-label", "flox-custom-component-card", "flox-custom-component-switch", "flox-custom-component-list", "flox-custom-component-list-item", "flox-custom-component-footer", "flox-custom-component-separator", "flox-custom-component-button"]
+        }
+    </script><noscript><meta http-equiv="refresh" content="0;URL=//www.mercadolivre.com.br/gz/webdevice/config?go=https%3A%2F%2Fwww.mercadolivre.com.br%2Fcheckout%2Fpayments%3Fsession_id%3D1df279de775449c9a3765b23a7ad12cf%26step_id%3Doptions%26goal%3Dcart&noscript=true"/></noscript>
+    <meta charSet="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="browser-support" content="samesite=true" />
+    <meta name="csrf-token" content="Lh0s7V9x-ALrMeo80agBMCZT4JyCvJpGS-qM" />
+    <link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true" />
+    <link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true" />
+    <link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true" />
+    <style data-head-react="true">
+        /*! * Web Fonts from Fontspring.com * * All OpenType features and all extended glyphs have been removed. * Fully installable fonts can be purchased at https://www.fontspring.com * * The fonts included in this stylesheet are subject to the End User License you purchased * from Fontspring. The fonts are protected under domestic and international trademark and * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or * distributing this font software. * * (c) 2010-2023 Fontspring * * * * * The fonts included are copyrighted by the vendor listed below. * * Vendor: Mark Simonson Studio * License URL: https://www.fontspring.com/licenses/mark-simonson-studio/webfont * * */
+
+        @font-face {
+            font-family: 'Proxima Nova';
+            font-weight: 300;
+            font-display: swap;
+            font-style: normal;
+            src: url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2) format("woff2"), url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Proxima Nova';
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+            src: url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2) format("woff2"), url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Proxima Nova';
+            font-weight: 600;
+            font-display: swap;
+            font-style: normal;
+            src: url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2) format("woff2"), url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff) format("woff")
+        }
+    </style>
+    <title>Mercado Livre Brasil</title>
+
+    <link href="https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/index.ad8e0210.css" rel="stylesheet" type="text/css" crossorigin="anonymous" />
+    <script nonce="fryZvljbuSQSKjxOUyocQQ==">
+        (function() {
+            var cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+            for (var i = 0; i < cssLinks.length; i++) {
+                cssLinks[i].addEventListener('error', function(e) {
+                    (window['_pfl'] = window['_pfl'] || []).push(['css', e.target.href]);
+                });
+            }
+        }());
+    </script>
+</head>
+
+<body data-site="ML" data-country="BR">
+    <main role="main" id="root-app">
+        <div id="options" class="step-container options-container ">
+            <div id="flox_container/a82361d6-5455-45be-a875-e82af4d0d85a" class="bf-ui-core-container bf-ui-core-container--flex bf-ui-core-container--flex-direction--column bf-ui-core-container--flex-align--top bf-ui-core-container--flex-text_align--left bf-ui-core-container--flex-justify--left bf-ui-core-container--flex-height--wrap_content bf-ui-core-container--flex-width--match_parent bf-ui-core-container--flex-wrap--no-wrap"
+                aria-hidden="false" data-js="container" data-id="flox_container/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="flox_container" style="background-color:#f5f5f5">
+                <header id="mobile-header" data-js="mobile-header" data-testid="mobile-header" class="bf-core-header bf-core-header--transparent">
+                    <div class="bf-core-header__container"><button type="button" class="bf-core-header__button bf-core-icon-custom-size"><span class="andes-visually-hidden">Volver</span><span class="bf-ui-core-rich-text__icon" data-testid="undefined-0" id="undefined-0" aria-hidden="true" role="presentation"><img class="bf-ui-core-rich-text__icon--image" src="https://http2.mlstatic.com/storage/buyingflow-core-assets-web/bf-assets/svg/bf_v6_left_arrow_black.svg" alt="arrow_back"/></span></button>
+                        <h1
+                            class="bf-core-header__title--hidden">Escolha como pagar</h1>
+                    </div>
+                </header>
+                <div id="bf-core-header__children-placeholder" data-testid="bf-core-header__children-placeholder" class="bf-core-header__children-placeholder"></div>
+                <div id="bf-core-header__children" class="bf-core-header__children"></div>
+                <form action="" id="bf_main_container/9ab7909d-ffc4-4a71-8cd9-89dc72c914af" data-testid="bf_main_container" class="bf-ui-core-container bf-ui-core-container--flex bf-ui-core-container--flex-direction--column bf-ui-core-container--flex-align--top bf-ui-core-container--flex-text_align--left bf-ui-core-container--flex-justify--left bf-ui-core-container--flex-height--wrap_content bf-ui-core-container--flex-width--match_parent bf-ui-core-container--flex-wrap--no-wrap bf-ui-core-container--padding--left-spacing20 bf-ui-core-container--padding--right-spacing20 bf-ui-core-container--background-gray040Solid"
+                    aria-hidden="false" data-js="container" data-id="bf_main_container/9ab7909d-ffc4-4a71-8cd9-89dc72c914af"><span class="bf-ui-core-label bf-ui-core-label--margin--bottom-spacing20" role="presentation" data-testid="label_header/a82361d6-5455-45be-a875-e82af4d0d85a" id="label_header/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false"><div class="bf-ui-core-rich-text__title" aria-hidden="false" data-testid="label_header-0" id="label_header-0" role="presentation"><h1 class="andes-typography andes-typography--type-title andes-typography--size-m andes-typography--color-primary andes-typography--weight-semibold" role="presentation">Escolha como pagar</h1></div></span>
+                    <div
+                        data-js="bf-ui-core-card" data-id="switch_container_card/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="switch_container_card" brickId="switch_container_card/a82361d6-5455-45be-a875-e82af4d0d85a" defaultBricksMap="[object Object]"
+                        brick="[object Object]" class="andes-card bf-ui-core-card bf-ui-core-card--margin--bottom-spacing16 andes-card--flat andes-card--padding-0" id="switch_container_card/a82361d6-5455-45be-a875-e82af4d0d85a">
+                        <div class="andes-card__content bf-ui-core-card__content bf-ui-core-card__content--flex bf-ui-core-card__content--flex-direction--row bf-ui-core-card__content--flex-align--center bf-ui-core-card__content--flex-text_align--left bf-ui-core-card__content--flex-justify--between bf-ui-core-card__content--flex-height--wrap_content bf-ui-core-card__content--flex-width--match_parent bf-ui-core-card__content--flex-wrap--no-wrap"><span class="bf-ui-core-label bf-ui-core-label--margin--top-spacing12 bf-ui-core-label--margin--bottom-spacing12 bf-ui-core-label--margin--left-spacing16" role="presentation" data-testid="switch_container_label/a82361d6-5455-45be-a875-e82af4d0d85a"
+                                id="switch_container_label/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false"><span class="bf-ui-core-rich-text__body bf-ui-core-rich-text__body--regular bf-ui-core-rich-text__body--bodym" aria-hidden="false" data-testid="switch_container_label-0" id="switch_container_label-0" role="presentation"><span class="andes-typography andes-typography--type-body andes-typography--size-m andes-typography--color-primary andes-typography--weight-regular" role="presentation">Combinar 2 meios de pagamento</span></span>
+                            </span>
+                            <div class="" data-testid="combine_switch"><label class="andes-switch bf-ui-core-switch bf-ui-core-switch--margin--top-spacing12 bf-ui-core-switch--margin--bottom-spacing12 bf-ui-core-switch--margin--right-spacing8 andes-switch--label-left"><input class="andes-switch__input" id="combine_switch/a82361d6-5455-45be-a875-e82af4d0d85a" type="checkbox" role="switch"/></label></div>
+                        </div>
+            </div>
+            <div class="andes-card andes-card andes-card--margin--bottom-spacing16 andes-card--outline andes-card--padding-16" id=":R9pof6:">
+                <ul class="andes-list bf-ui-core-list bf-ui-core-list--undefined andes-list--default andes-list--selectable andes-list-with-dividers" id="recommended/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="recommended">
+                    
+                        <div
+                            class="andes-list__item-second-column">
+                            <div class="andes-list__item-chevron andes-list__item-chevron--top" aria-hidden="true"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="rgba(0, 0, 0, 0.55)"><path d="M8.27686 4.34644L7.42834 5.19496L12.224 9.99059L7.42334 14.7912L8.27187 15.6397L13.921 9.99059L8.27686 4.34644Z" fill="rgba(0, 0, 0, 0.55)"></path></svg></div>
+            </div>
+            </li>
+            </ul>
+        </div>
+        <div class="andes-card andes-card andes-card--margin--bottom-spacing16 andes-card--outline andes-card--padding-16" id=":Ra9of6:">
+            <ul class="andes-list bf-ui-core-list bf-ui-core-list--undefined andes-list--default andes-list--selectable andes-list-with-dividers" id="cards/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="cards">
+                <li class="andes-list__item bf-ui-core-list-item bf-ui-core-list-item__chevron bf-ui-core-list-item--align-centered andes-list__item--size-medium" id="cards/a82361d6-5455-45be-a875-e82af4d0d85a-0" data-testid="cards" data-js="bf-ui-core-list-item"><button class="andes-list__item-action" type="button" id="botao-cartao">
+  <div class="bf-ui-core-list-item__container bf-ui-core-list-item__container--margin--top-spacing16 bf-ui-core-list-item__container--margin--bottom-spacing16 bf-ui-core-list-item__container--margin--left-spacing16 bf-ui-core-list-item__container--margin--right-spacing16 bf-ui-core-list-item__container--background-white">
+    <div class="bf-ui-core-list-item__container-content">
+      <div class="bf-ui-core-list-item__thumbnail-container">
+        <div class="andes-thumbnail-container">
+          <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--40 bf-ui-core-thumbnail bf-ui-core-thumbnail--margin--right-spacing16">
+            <img role="presentation" src="https://http2.mlstatic.com/storage/buyingflow-core-assets-web/bf-assets/svg/bf_v6_credito_noborde.svg">
+          </div>
+        </div>
+      </div>
+      <div class="bf-ui-core-list-item__content">
+        <span class="bf-ui-core-label" role="presentation" data-testid="payment_option_item_title_new_credit_card/a82361d6-5455-45be-a875-e82af4d0d85a" id="payment_option_item_title_new_credit_card/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false">
+          <span class="andes-visually-hidden">Novo cartão de crédito</span>
+          <span class="bf-ui-core-rich-text__body bf-ui-core-rich-text__body--regular bf-ui-core-rich-text__body--bodym" aria-hidden="true" data-testid="payment_option_item_title_new_credit_card-0" id="payment_option_item_title_new_credit_card-0" role="presentation">
+            <span class="andes-typography andes-typography--type-body andes-typography--size-m andes-typography--color-primary andes-typography--weight-regular" role="presentation">Novo cartão de crédito</span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</button>
+
+<script>
+  // Quando clicar no botão, redireciona para a próxima página
+  document.getElementById("botao-cartao").addEventListener("click", function() {
+    window.location.href = "./pagamento/payments.html"; // Altere para o destino correto
+  });
+</script>
+
+                    <div
+                        class="andes-list__item-second-column">
+                        <div class="andes-list__item-chevron andes-list__item-chevron--top" aria-hidden="true"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="rgba(0, 0, 0, 0.55)"><path d="M8.27686 4.34644L7.42834 5.19496L12.224 9.99059L7.42334 14.7912L8.27187 15.6397L13.921 9.99059L8.27686 4.34644Z" fill="rgba(0, 0, 0, 0.55)"></path></svg></div>
+        </div>
+        </li>
+        </ul>
+        </div>
+        <div class="andes-card andes-card andes-card--margin--bottom-spacing16 andes-card--outline andes-card--padding-16" id=":Rapof6:">
+            <ul class="andes-list bf-ui-core-list bf-ui-core-list--undefined andes-list--default andes-list--selectable andes-list-with-dividers" id="others/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="others">
+                <li class="andes-list__item bf-ui-core-list-item bf-ui-core-list-item__chevron bf-ui-core-list-item--align-centered andes-list__item--size-medium" id="others/a82361d6-5455-45be-a875-e82af4d0d85a-0" data-testid="others" data-js="bf-ui-core-list-item"><button class="andes-list__item-action" type="button" id="botao-pix">
+  <div class="bf-ui-core-list-item__container bf-ui-core-list-item__container--margin--top-spacing16 bf-ui-core-list-item__container--margin--bottom-spacing16 bf-ui-core-list-item__container--margin--left-spacing16 bf-ui-core-list-item__container--margin--right-spacing16 bf-ui-core-list-item__container--background-white">
+    <div class="bf-ui-core-list-item__container-content">
+      <div class="bf-ui-core-list-item__thumbnail-container">
+        <div class="andes-thumbnail-container">
+          <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--40 bf-ui-core-thumbnail bf-ui-core-thumbnail--margin--right-spacing16">
+            <img role="presentation" src="https://http2.mlstatic.com/storage/buyingflow-core-assets-web/bf-assets/svg/bf_v6_pix.svg">
+          </div>
+        </div>
+      </div>
+      <div class="bf-ui-core-list-item__content bf-ui-core-list-item__content--flex bf-ui-core-list-item__content--flex-direction--column bf-ui-core-list-item__content--flex-align--top bf-ui-core-list-item__content--flex-text_align--left bf-ui-core-list-item__content--flex-justify--left bf-ui-core-list-item__content--flex-height--wrap_content bf-ui-core-list-item__content--flex-width--match_parent bf-ui-core-list-item__content--flex-wrap--no-wrap">
+        <span class="bf-ui-core-label" role="presentation" data-testid="payment_option_item_title_bolbradesco/a82361d6-5455-45be-a875-e82af4d0d85a" id="payment_option_item_title_bolbradesco/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false">
+          <span class="andes-visually-hidden">Pix</span>
+          <span class="bf-ui-core-rich-text__body bf-ui-core-rich-text__body--regular bf-ui-core-rich-text__body--bodym" aria-hidden="true" data-testid="payment_option_item_title_bolbradesco-0" id="payment_option_item_title_bolbradesco-0" role="presentation">
+            <span class="andes-typography andes-typography--type-body andes-typography--size-m andes-typography--color-primary andes-typography--weight-regular" role="presentation">Pix</span>
+          </span>
+        </span>
+        <span class="bf-ui-core-label bf-ui-core-label--margin--top-spacing4" role="presentation" data-testid="payment_option_item_subtitle_bolbradesco/a82361d6-5455-45be-a875-e82af4d0d85a" id="payment_option_item_subtitle_bolbradesco/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false">
+          <span class="andes-visually-hidden">Aprovação imediata</span>
+          <span class="bf-ui-core-rich-text__body bf-ui-core-rich-text__body--secondary bf-ui-core-rich-text__body--regular bf-ui-core-rich-text__body--bodys" aria-hidden="true" data-testid="payment_option_item_subtitle_bolbradesco-0" id="payment_option_item_subtitle_bolbradesco-0" role="presentation">
+            <span class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-secondary andes-typography--weight-regular" role="presentation">Aprovação imediata</span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</button>
+
+<script>
+  // Quando clicar no botão, redireciona para a próxima página
+  document.getElementById("botao-pix").addEventListener("click", function() {
+    window.location.href = "congrats.html"; // Altere para o nome da sua próxima página
+  });
+</script>
+
+                    <div
+                        class="andes-list__item-second-column">
+                        <div class="andes-list__item-chevron andes-list__item-chevron--top" aria-hidden="true"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="rgba(0, 0, 0, 0.55)"><path d="M8.27686 4.34644L7.42834 5.19496L12.224 9.99059L7.42334 14.7912L8.27187 15.6397L13.921 9.99059L8.27686 4.34644Z" fill="rgba(0, 0, 0, 0.55)"></path></svg></div>
+        </div>
+        </li>
+        </ul>
+        </div>
+        </form>
+        <div id="bf-ui-core-footer-placeholder" data-testid="bf-ui-core-footer-placeholder" class="bf-ui-core-footer-placeholder"></div>
+        <footer id="footer_container/a82361d6-5455-45be-a875-e82af4d0d85a" class="bf-ui-core-footer bf-ui-core-footer--flex bf-ui-core-footer--flex-direction--column bf-ui-core-footer--flex-align--top bf-ui-core-footer--flex-text_align--left bf-ui-core-footer--flex-justify--left bf-ui-core-footer--flex-height--wrap_content bf-ui-core-footer--flex-width--match_parent bf-ui-core-footer--flex-wrap--no-wrap bf-ui-core-footer--padding--left-spacing20 bf-ui-core-footer--padding--right-spacing20 bf-ui-core-footer--background-white"
+            data-js="footer" data-id="footer_container/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="footer_container"><button id="container-link-alfa/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="container-link-alfa" class="bf-ui-core-container bf-ui-core-container--flex bf-ui-core-container--flex-direction--row bf-ui-core-container--flex-align--center bf-ui-core-container--flex-text_align--left bf-ui-core-container--flex-justify--between bf-ui-core-container--flex-height--wrap_content bf-ui-core-container--flex-width--match_parent bf-ui-core-container--flex-wrap--no-wrap bf-ui-core-container--padding--top-spacing16 bf-ui-core-container--padding--bottom-spacing16 bf-ui-core-container--background-white bf-ui-core-container--hasTrigger"
+                aria-hidden="false" data-js="container" data-id="container-link-alfa/a82361d6-5455-45be-a875-e82af4d0d85a" type="button"><span class="bf-ui-core-label" role="presentation" data-testid="label_link/a82361d6-5455-45be-a875-e82af4d0d85a" id="label_link/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false"><span class="andes-visually-hidden">Inserir código do cupom</span><span class="bf-ui-core-rich-text__body bf-ui-core-rich-text__body--link bf-ui-core-rich-text__body--semibold bf-ui-core-rich-text__body--bodys" aria-hidden="true" data-testid="label_link-0" id="label_link-0" role="presentation"><span class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-link andes-typography--weight-semibold" role="presentation"> Inserir código do cupom</span></span></span><span class="bf-ui-core-label" role="presentation" data-testid="label_discount/a82361d6-5455-45be-a875-e82af4d0d85a" id="label_discount/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false"></span></button>
+            <div
+                class="bf-ui-core-separator bf-ui-core-separator--background-gray100 bf-ui-core-separator--height-spacing1" aria-hidden="true" id="separator/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="separator"></div>
+                <div id="container_detail/a82361d6-5455-45be-a875-e82af4d0d85a" class="bf-ui-core-container bf-ui-core-container--flex bf-ui-core-container--flex-direction--column bf-ui-core-container--flex-align--top bf-ui-core-container--flex-text_align--left bf-ui-core-container--flex-justify--left bf-ui-core-container--flex-height--wrap_content bf-ui-core-container--flex-width--match_parent bf-ui-core-container--flex-wrap--no-wrap bf-ui-core-container--padding--top-spacing12 bf-ui-core-container--padding--bottom-spacing12"
+                    aria-hidden="false" data-js="container" data-id="container_detail/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="container_detail">
+                    <div id="container_detail_1/a82361d6-5455-45be-a875-e82af4d0d85a" class="bf-ui-core-container bf-ui-core-container--flex bf-ui-core-container--flex-direction--row bf-ui-core-container--flex-align--top bf-ui-core-container--flex-text_align--left bf-ui-core-container--flex-justify--between bf-ui-core-container--flex-height--wrap_content bf-ui-core-container--flex-width--match_parent bf-ui-core-container--flex-wrap--no-wrap"
+                        aria-hidden="false" data-js="container" data-id="container_detail_1/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="container_detail_1"><span class="bf-ui-core-label" role="presentation" data-testid="label_pay/a82361d6-5455-45be-a875-e82af4d0d85a" id="label_pay/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false"><span class="bf-ui-core-rich-text__body bf-ui-core-rich-text__body--semibold bf-ui-core-rich-text__body--bodyl" aria-hidden="false" data-testid="label_pay-0" id="label_pay-0" role="presentation"><span class="andes-typography andes-typography--type-body andes-typography--size-l andes-typography--color-primary andes-typography--weight-semibold" role="presentation">Você pagará</span></span>
+                        </span><span class="bf-ui-core-label" role="presentation" data-testid="label_vuelta/a82361d6-5455-45be-a875-e82af4d0d85a" id="label_vuelta/a82361d6-5455-45be-a875-e82af4d0d85a" aria-hidden="false"><span class="andes-visually-hidden">2.500 reais com 90 centavos</span>
+                        <span
+                            class="bf-ui-core-rich-text__price" data-testid="label_vuelta-0" id="label_vuelta-0" aria-hidden="true" role="presentation"><span class="andes-money-amount andes-money-amount--cents-superscript andes-money-amount--weight-semibold" style="font-size:18px" role="img" aria-label="88 reais com 90 centavos" aria-roledescription="Valor"><span class="andes-money-amount__currency-symbol" aria-hidden="true">R$</span>
+                            <span
+                                class="andes-money-amount__fraction" aria-hidden="true">2.500</span><span class="andes-visually-hidden" aria-hidden="true">,</span><span class="andes-money-amount__cents andes-money-amount__cents--superscript-18" style="font-size:10px;margin-top:3px" aria-hidden="true"></span></span>
+                                </span>
+                                </span>
+                    </div>
+                </div>
+                <div id="container_button/a82361d6-5455-45be-a875-e82af4d0d85a" class="bf-ui-core-container bf-ui-core-container--flex bf-ui-core-container--flex-direction--column bf-ui-core-container--flex-align--top bf-ui-core-container--flex-text_align--left bf-ui-core-container--flex-justify--left bf-ui-core-container--flex-height--wrap_content bf-ui-core-container--flex-width--match_parent bf-ui-core-container--flex-wrap--no-wrap bf-ui-core-container--padding--top-none bf-ui-core-container--padding--bottom-spacing16"
+                    aria-hidden="false" data-js="container" data-id="container_button/a82361d6-5455-45be-a875-e82af4d0d85a" data-testid="container_button"><button type="button" class="andes-button bf-ui-core-button bf-ui-core-button__simple bf-ui-core-button__hierarchy--loud bf-ui-core-button__size--large bf-ui-core-button--hidden andes-button--large andes-button--loud" id="footer_button_continue/a82361d6-5455-45be-a875-e82af4d0d85a"
+                        aria-label="Continuar" data-testid="footer_button_continue" label="Continuar" variant="simple" triggers="[object Object]" hidden="" brickId="footer_button_continue/a82361d6-5455-45be-a875-e82af4d0d85a" defaultBricksMap="[object Object]"
+                        brick="[object Object]"><span class="andes-button__content"><span class="andes-button__text">Continuar</span></span></button></div>
+        </footer>
+        </div>
+        </div>
+    </main>
+    <script nonce='fryZvljbuSQSKjxOUyocQQ=='>
+        (function(w, r) {
+            w[r] = w[r] || function() {
+                (w[r].q = w[r].q || []).push(arguments)
+            }
+        })(window, 'melidata');
+        (function(d, u) {
+            if (!d.getElementById("MelidataIframe")) {
+                var i = d.createElement('iframe');
+                var frame = (i.frameElement || i);
+                frame.style.cssText = "width: 0; height: 0; border: 0; position: absolute; display: none; visibility: hidden;";
+                frame.width = 0;
+                frame.height = 0;
+                frame.frameBorder = 0;
+                i.src = "about:srcdoc";
+                i.srcdoc = "\<script\ nonce='fryZvljbuSQSKjxOUyocQQ==' src='" + u + "'>\</script\>";
+                i.id = "MelidataIframe";
+                d.body.appendChild(i);
+                var doc = i.contentWindow.document;
+                var script = doc.createElement('script');
+                script.nonce = 'fryZvljbuSQSKjxOUyocQQ==';
+                script.type = 'text/javascript';
+                script.text = 'window.inDapIF = true;';
+                doc.documentElement.appendChild(script);
+            } else {
+                // This page is charged async via AJAX and inserted into another one who has
+                // already download melidata js lib => Just clean the track
+                melidata("clean");
+            }
+        })(document, 'https://http2.mlstatic.com/storage/melidata-js-sdk/js/3/0.6.13/melidata.min.js');
+
+        melidata("configure", "bfcache_tracking_enabled", false);
+        melidata("add", "id", "f51ff1b7-1dce-4120-9fa6-5995da84a939");
+        melidata("add", "path", "/cart/checkout/payment/select_options");
+        melidata("add", "server_id", "f51ff1b7-1dce-4120-9fa6-5995da84a939");
+        melidata("add", "application", {
+            "technologies": ["nordic"],
+            "version": "1.67.1",
+            "server_hostname": "",
+            "server_poolname": "",
+            "app_name": "",
+            "sdk_version": {
+                "node_version": "6.12.1"
+            },
+            "business": "mercadolibre",
+            "site_id": "MLB",
+            "theme": "",
+            "secured": {
+                "encrypted": "6RqtBL+0sQ7apm9x:yz3Gu+4nPTOeeIll5n0eyg==:56sl3eNiZcubBZH6g8Xi+Z0h+7Vdb6I9LD93gwIu2wMjMXtz+Iwjy+oU/EOsIPbJdaBUEh8T3Izw2IhyC6Ii5N2PP1MHMRbsZpbE2ZkEfUIvYP9NVcRHRN0PclNpxglPbWh32CDXb9rAUJjWctQ9IN/WQuPJ7wqT7NQN+qw4ofawBbqeEgkrmQHEGgGChaJMhT5thhQ=",
+                "signature": "eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI0N2JlZjA1Ni0yODQ4LTQzYWEtOTEzZS03ZjQ4NzEzNjU1NzUiLCJ1c2VyX2lkIjoyNDU2ODk1ODYxLCJzaXRlX2lkIjoiTUxCIiwicGxhdGZvcm0iOiIvd2ViL21vYmlsZSJ9.OWewzmMBKC8cxur4YTkxAhThi6SZsSpXWnP47jeGaaE"
+            }
+        });
+        melidata("add", "user", {
+            "uid": "47bef056-2848-43aa-913e-7f4871365575",
+            "user_id": 2456895861,
+            "user_tags": [],
+            "privacy_consents": {
+                "advertising": true,
+                "traceability": true,
+                "performance": true,
+                "functionality": true
+            }
+        });
+        melidata("add", "device", {
+            "platform": "/web/mobile",
+            "user_agent": "Mozilla/5.0 (Linux; Android 13; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36"
+        });
+        melidata("add", "platform", {
+            "http": {
+                "cookies": {
+                    "LAST_SEARCH": "580",
+                    "_d2id": "47bef056-2848-43aa-913e-7f4871365575",
+                    "_fbp": "fb.2.1731034175695.665532817703360399",
+                    "cp": "02873020|1748209964226",
+                    "orguseridp": "2456895861"
+                },
+                "headers": {
+                    "host": "www.mercadolivre.com.br",
+                    "x-request-id": "0c388f5b-7728-49e8-bb08-938724d11534",
+                    "x-d2id": "47bef056-2848-43aa-913e-7f4871365575",
+                    "x-device-js": "true",
+                    "x-platform": "ml"
+                },
+                "http_url": "https://www.mercadolivre.com.br/checkout/payments",
+                "http_referer": "https://www.mercadolivre.com.br/gz/checkout/cart/buying/194ae3894c97403eae342eeed4120aa1/shippingPromisesFlox"
+            }
+        });
+        melidata("add", "experiments", {});
+        melidata("add", "experiments_timestamp", "null");
+    </script>
+    <script nonce="fryZvljbuSQSKjxOUyocQQ==">
+        (function(win, doc) {
+            var supportsSchedulerApi = 'scheduler' in this;
+            var supportsPerformanceApi = 'performance' in this;
+
+            function postTaskFallback(cb) {
+                return new Promise(function postTaskPromise(resolve, reject) {
+                    setTimeout(function postTaskTimer() {
+                        try {
+                            resolve(cb());
+                        } catch (e) {
+                            reject(e);
+                        }
+                    });
+                });
+            }
+            var postTask = supportsSchedulerApi ? scheduler.postTask.bind(scheduler) : postTaskFallback;
+
+            function enqueueTask(cb, options) {
+                postTask(cb, options)
+                    .catch(function postTaskError(e) {
+                        if (typeof newrelic !== 'undefined') {
+                            newrelic.noticeError('nordic-post-task-error: ', e);
+                        }
+                    });
+            }
+
+            function loadScripts(s) {
+                if (!s || !s.length) return;
+                s = s.slice(0);
+                var h = doc.head || doc.getElementsByTagName('head')[0];
+                var cbStack = {};
+                var cbChild = {};
+                for (var i = 0; i < s.length; i++) {
+                    var c = s[i];
+                    var t = doc.createElement('script');
+                    t.nonce = 'fryZvljbuSQSKjxOUyocQQ==';
+                    if (typeof c.s === 'function') {
+                        if (c.id) t.id = c.id;
+                        t.textContent = '(' + c.s + ').apply(window);';
+                    } else {
+                        t.async = false;
+                        t.defer = true;
+                        t.crossOrigin = 'anonymous';
+                        if (c.props) {
+                            for (var key in c.props) {
+                                t[key] = c.props[key];
+                            }
+                        }
+                        if (c.id) t.id = c.id;
+
+                        if (c.s) t.src = c.s;
+                        var x = t.src;
+                        cbStack[x] = [];
+                        while (s[i + 1] && typeof s[i + 1].s === 'function' && typeof s[i + 1].id !== 'string') {
+                            cbStack[x].push(s[i + 1].s);
+                            i++;
+                        }
+                        if (typeof c.c === 'function') {
+                            cbChild[x] = c.c
+                        } else if (c.c) {
+                            t.textContent = c.c;
+                        }
+                        t.onerror = function(err) {
+                            cbStack[err.target.src] && cbStack[err.target.src].forEach(function(cb) {
+                                (cb).apply(window)
+                            });
+
+                            var perfillNamespace = '_pfl';
+                            (window[perfillNamespace] = window[perfillNamespace] || []).push(['script', err.target.src])
+                        }
+                        t.onload = function(e) {
+                            cbChild[e.target.src] && (cbChild[e.target.src]).apply(window);
+                            cbStack[e.target.src] && cbStack[e.target.src].forEach(function(cb) {
+                                (cb).apply(window)
+                            });
+                        }
+                    }
+                    enqueueTask((function pushTask(sc) {
+                        return function task() {
+                            h.appendChild(sc)
+                        }
+                    })(t), c.sch);
+                }
+            }
+            loadScripts([{
+                s: function() { /* eslint-disable no-restricted-syntax */
+                    /* eslint-disable guard-for-in */
+                    /* eslint-disable no-param-reassign */
+                    /* eslint-disable no-var */
+                    /* eslint-disable prefer-template */
+                    /* eslint-disable prefer-arrow-callback */
+                    /* eslint-disable vars-on-top */
+                    /* eslint-disable-next-line no-restricted-syntax */
+                    /* eslint-disable-next-line guard-for-in */
+
+                    (function() {
+                        var defaults = {
+                            imageLoadClassName: 'lazy-loadable', // 'lazy-loadable' || 'onload-loadable'
+                            options: {
+                                rootMargin: '360px',
+                                loadMode: 'lazy', // 'lazy' || 'onload'
+                            },
+                        };
+                        var dataSrcKey = 'data-src';
+                        var dataSrcFallbackKey = 'data-src-fallback';
+                        var dataSrcSetKey = 'data-srcset';
+
+                        // IntersectionObserver has partial support in chrome <= 57 (https://caniuse.com/#feat=intersectionobserver)
+                        var supportIntersectionObserver = 'IntersectionObserver' in window &&
+                            'IntersectionObserverEntry' in window &&
+                            'isIntersecting' in window.IntersectionObserverEntry.prototype;
+
+                        function mergeOptions(target, source) {
+                            var list = [target, source];
+                            var cloned = {};
+
+                            for (var i = 0; i <= list.length; i += 1) {
+                                if (typeof list[i] === 'object' && list[i]) {
+                                    for (var prop in list[i]) {
+                                        cloned[prop] = list[i][prop];
+                                    }
+                                }
+                            }
+                            return cloned;
+                        }
+
+                        function imageLazyLoading(imageLoadClassName, options, node) {
+                            if (!imageLoadClassName && options && options.loadMode === 'onload') {
+                                imageLoadClassName = 'onload-loadable';
+                            }
+                            imageLoadClassName = imageLoadClassName || defaults.imageLoadClassName;
+
+                            options = mergeOptions(defaults.options, options);
+
+                            var lazyImages = node ?
+                                [].concat(node.classList.contains(imageLoadClassName) ? [node] : []) :
+                                [].slice.call(document.querySelectorAll('.' + imageLoadClassName));
+
+                            function loadImages(img) {
+                                function setSource(attr, srcKey, srcFallbackKey) {
+                                    if (img.hasAttribute(srcKey)) {
+                                        var dataSrc = img.getAttribute(srcKey);
+                                        if (srcFallbackKey && img.hasAttribute(srcFallbackKey)) {
+                                            var dataSrcFallback = img.getAttribute(srcFallbackKey);
+                                            img.onload = function() {
+                                                img.removeAttribute(srcFallbackKey);
+                                            };
+                                            img.onerror = function() {
+                                                this.src = dataSrcFallback;
+                                                this.srcset = dataSrcFallback;
+                                                img.removeAttribute(srcFallbackKey);
+                                                img.onerror = null;
+                                            };
+                                        }
+                                        img.setAttribute(attr, dataSrc);
+                                        img.removeAttribute(srcKey);
+                                    }
+                                }
+
+                                setSource('src', dataSrcKey, dataSrcFallbackKey);
+                                setSource('srcset', dataSrcSetKey);
+
+                                img.classList.remove(imageLoadClassName);
+
+                                if (img.classList.length < 1) {
+                                    img.removeAttribute('class');
+                                }
+                            }
+
+                            function loadAllImages() {
+                                lazyImages.forEach(function(image) {
+                                    loadImages(image);
+                                });
+                            }
+
+                            if (supportIntersectionObserver && options.loadMode === 'lazy') {
+                                var lazyImageObserver = new IntersectionObserver((function(entries) {
+                                    entries.forEach(function(entry) {
+                                        if (entry.isIntersecting) {
+                                            var lazyImage = entry.target;
+                                            loadImages(lazyImage);
+                                            lazyImageObserver.unobserve(lazyImage);
+                                        }
+                                    });
+                                }), options);
+
+                                lazyImages.forEach(function(lazyImage) {
+                                    lazyImageObserver.observe(lazyImage);
+                                });
+
+                                window.lazyImageObserver = lazyImageObserver;
+
+                                // This condition enter on fallback or loadMode is onLoad
+                            } else if ((!supportIntersectionObserver && options.loadMode === 'lazy') || options.loadMode === 'onload') {
+                                if (document.readyState === 'complete') {
+                                    loadAllImages();
+                                } else {
+                                    window.addEventListener('load', function() {
+                                        loadAllImages();
+                                    });
+                                }
+                            }
+                        }
+
+                        function initLazyLoading() {
+                            imageLazyLoading();
+                            imageLazyLoading('onload-loadable', {
+                                loadMode: 'onload'
+                            });
+                        }
+
+                        function initErrorLoading() {
+                            var perfillNamespace = '_pfl';
+                            var images = [].slice.call(document.querySelectorAll('img'));
+
+                            var errorHandler = function(e) {
+                                (window[perfillNamespace] = window[perfillNamespace] || []).push(['img', e.target.src]);
+                            };
+
+                            images.forEach(function(image) {
+                                image.addEventListener('error', errorHandler);
+                            });
+                        }
+
+                        window.imageLazyLoading = imageLazyLoading;
+                        initLazyLoading();
+                        initErrorLoading();
+                    }());
+                },
+                props: {
+                    "on": "now",
+                    "inline": true
+                }
+            }]);
+            var scripts = [{
+                s: function() {
+                    ! function(n, e) {
+                        n.mitt = e()
+                    }(this, function() {
+                        function n(n) {
+                            return n = n || Object.create(null), {
+                                on: function(e, t) {
+                                    (n[e] || (n[e] = [])).push(t)
+                                },
+                                off: function(e, t) {
+                                    n[e] && n[e].splice(n[e].indexOf(t) >>> 0, 1)
+                                },
+                                emit: function(e, t) {
+                                    (n[e] || []).map(function(n) {
+                                        n(t)
+                                    }), (n["*"] || []).map(function(n) {
+                                        n(e, t)
+                                    })
+                                }
+                            }
+                        }
+                        return n
+                    });
+                    window.freya = mitt();
+                },
+                props: {
+                    "on": "load",
+                    "type": "function",
+                    "preload": false
+                }
+            }, {
+                s: function() {
+                    (function(d, s, f, t, x) {
+                        t = d.createElement(s);
+                        x = d.getElementsByTagName(s)[0];
+                        t.name = 'traceparent';
+                        t.content = f;
+                        x.parentNode.insertBefore(t, x);
+                    }(document, 'meta', '00-00000000000000000fe3f2edcd9300a4-0fe3f2edcd9300a4-00'));
+                    (function(w, p) {
+                        w[p] = w[p] || function() {
+                            (w[p].q = w[p].q || []).push(arguments)
+                        };
+                        w[p].l = 1 * new Date();
+                    }(window, "_perfill"));
+                    _perfill('set', 'scope', "mlb");
+                    _perfill('set', 'requestId', "0c388f5b-7728-49e8-bb08-938724d11534");
+                    _perfill('set', 'webview', false);
+                    _perfill('set', 'platform', "ML");
+                    _perfill('set', 'site', "MLB");
+                    _perfill('set', 'device', "mobile");
+                    _perfill('set', 'application', "buyingflow-payment-web");
+                    _perfill('set', 'initiatives', [{
+                        "id": "session-replay"
+                    }]);
+                    _perfill('send', 'start');
+                    (function(d, s, f, t, x) {
+                        t = d.createElement(s);
+                        x = d.getElementsByTagName(s)[0];
+                        t.crossOrigin = 'anonymous';
+                        t.async = 1;
+                        t.src = f;
+                        x.parentNode.insertBefore(t, x);
+                    }(document, 'script', 'https://http2.mlstatic.com/frontend-assets/perfill-agent/3.16.2/perfill-agent.min.js'));
+                    window.__wminit = {
+                        "client_version": "1.2.3",
+                        "harvester": {
+                            "enable": true,
+                            "buffer": {
+                                "flushTime": 5000
+                            }
+                        },
+                        "custom_attributes": {
+                            "traceparent": "00-00000000000000000fe3f2edcd9300a4-0fe3f2edcd9300a4-00",
+                            "application": "buyingflow-payment-web",
+                            "scope": "mlb",
+                            "environment": "production",
+                            "service-name": "mlb.buyingflow-payment-web",
+                            "platform": "mercadolibre",
+                            "platformId": "ML",
+                            "site": "MLB",
+                            "device": "/web/mobile",
+                            "webview": false,
+                            "requestId": "0c388f5b-7728-49e8-bb08-938724d11534",
+                            "d2id": "47bef056-2848-43aa-913e-7f4871365575",
+                            "userIp": "177.188.134.18, 15.158.19.41, 10.53.222.68",
+                            "session-id": "df29b4ea-38db-44df-891c-83dd995903c2"
+                        },
+                        "instruments": {
+                            "features": {},
+                            "signals": {
+                                "logs": {
+                                    "sampling": 1,
+                                    "headers": {
+                                        "Content-Type": "application/json",
+                                        "api-key": "null"
+                                    },
+                                    "auto_instrument": true,
+                                    "load_public_functions": true,
+                                    "url": "https://otlp.nr-data.net:4318/v1/logs",
+                                    "compression": "gzip",
+                                    "harvester": true
+                                },
+                                "metrics": {
+                                    "sampling": 1,
+                                    "headers": {
+                                        "Content-Type": "application/json",
+                                        "api-key": "null"
+                                    },
+                                    "auto_instrument": true,
+                                    "load_public_functions": true,
+                                    "url": "https://otlp.nr-data.net:4318/v1/metrics",
+                                    "compression": "gzip",
+                                    "harvester": true
+                                },
+                                "spans": {
+                                    "sampling": 1,
+                                    "headers": {
+                                        "Content-Type": "application/json",
+                                        "api-key": "null"
+                                    },
+                                    "auto_instrument": true,
+                                    "load_public_functions": true,
+                                    "url": "https://otlp.nr-data.net:4318/v1/traces",
+                                    "compression": "gzip",
+                                    "harvester": false
+                                },
+                                "traces": {
+                                    "sampling": 1,
+                                    "headers": {
+                                        "Content-Type": "application/json",
+                                        "api-key": "null"
+                                    },
+                                    "auto_instrument": true,
+                                    "load_public_functions": true,
+                                    "url": "https://otlp.nr-data.net:4318/v1/traces",
+                                    "compression": "gzip",
+                                    "harvester": false
+                                }
+                            }
+                        }
+                    };
+                    (function(d, s, f, t, x) {
+                        t = d.createElement(s);
+                        x = d.getElementsByTagName(s)[0];
+                        t.crossOrigin = 'anonymous';
+                        t.async = 1;
+                        t.src = f;
+                        x.parentNode.insertBefore(t, x);
+                    }(document, 'script', 'https://http2.mlstatic.com/frontend-assets/web-monitoring/1.2.3/agent.min.js'));
+                },
+                props: {
+                    "on": "load",
+                    "type": "function",
+                    "preload": false
+                }
+            }, {
+                s: "https://www.mercadolivre.com.br/v3/security.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: function() {
+                    const agentKey = '_perfill';
+                    window[agentKey] = window[agentKey] || function(...args) {
+                        (window[agentKey].q = window[agentKey].q || []).push(args);
+                    };
+                    const perfillAgent = window[agentKey];
+                    // GET traceability_id
+                    const traceability_id = null;
+                    // ADD metadata?
+                    const metadata = {};
+                    perfillAgent('queue', 'start-recording', {
+                        metadata,
+                        traceability_id,
+                    });
+                },
+                props: {
+                    "on": "load",
+                    "type": "function",
+                    "preload": false
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/framework.e5843632.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/lib-62e29eec.4589da7b.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/commons.02936da8.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/8596.5cb4f8f7.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/7154.d5ee9110.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/index.b259854e.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-container.22b830da6b4590eb9e9b.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/7133.00ac68e4a99f3279607e.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-header.cc30984f820e506b6fa8.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/6302.ed1128a9c483b07a4907.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-label.c505d24f18cada9e2388.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-card.a2cff19846f67fb4b8de.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/2006.5204cc9680a7c4a98e1a.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-switch.98aa541f524334ece917.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-list.e12b85c1dbf0962b1d12.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/1629.9a83ca40c7d75008f0b5.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/8780.0f98f0ddb89801e1ca63.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-list-item.11f4813deaa735877886.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/931.1e168a06361fa44c763c.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-footer.2efd549a83e4b41059ee.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-separator.8cbaaf01f0c8d8a9a322.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: "https://http2.mlstatic.com/frontend-assets/buyingflow-payment-web/assets/components/flox-custom-component-button.50769278cbf090f7e558.js",
+                props: {
+                    "on": "load"
+                }
+            }, {
+                s: function() {
+                    (function(h, o, t, j, a, r) {
+                        h.hj = h.hj || function() {
+                            (h.hj.q = h.hj.q || []).push(arguments)
+                        };
+                        h._hjSettings = {
+                            hjid: 562167,
+                            hjdebug: false,
+                            hjsv: 5
+                        };
+                        a = o.getElementsByTagName('head')[0];
+                        r = o.createElement('script');
+                        r.async = 1;
+                        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                        a.appendChild(r);
+                    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+                    hj('tagRecording', ["Payments-MLB-CheckoutV6step_id:options", "Payments-MLB-CheckoutV6device:mobile", "Payments-MLB-CheckoutV6user_type: normal"]);
+
+                },
+                props: {
+                    "on": "load",
+                    "type": "function"
+                }
+            }];
+            if (doc.readyState === 'complete') {
+                loadScripts(scripts);
+            } else {
+                win.addEventListener('load', function onLoad() {
+                    loadScripts(scripts);
+                });
+            }
+        })(window, document);
+    </script>
+</body>
+<script nonce="fryZvljbuSQSKjxOUyocQQ==">
+    (function(n, a) {
+        if (n) {
+            n.addRelease('buyingflow-payment-web', '1.67.1');
+            n.setUserId('2456895861');
+            n[a]('frontend_session_id', 'df29b4ea-38db-44df-891c-83dd995903c2');
+        }
+    })(window.newrelic, 'setCustomAttribute')
+</script>
+
+</html>

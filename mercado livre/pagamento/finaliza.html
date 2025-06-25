@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Pagamento Não Realizado | Cartão de Crédito</title>
+	<style>
+		:root {
+			--amarelo: #585004;
+			--dourado: #eecb07;
+			--preto: #000000;
+			--cinza-claro: #aaaaa8;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		body {
+			background-color: var(--amarelo);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			padding: 20px;
+		}
+
+		.finaliza {
+			background-color: var(--dourado);
+			padding: 40px 30px;
+			border-radius: 16px;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+			text-align: center;
+			animation: fadeIn 0.6s ease-in-out;
+			max-width: 420px;
+			width: 100%;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.img-sucess {
+			width: 80px;
+			height: 80px;
+			margin-bottom: 20px;
+		}
+
+		.thanks {
+			font-size: 24px;
+			color: var(--preto);
+			font-weight: 600;
+			margin-bottom: 12px;
+		}
+
+		.subThanks {
+			font-size: 15px;
+			color: #333;
+			margin-bottom: 30px;
+			line-height: 1.6;
+		}
+
+		.button__final {
+			background-color: var(--preto);
+			color: white;
+			border: none;
+			padding: 14px 28px;
+			font-size: 16px;
+			border-radius: 8px;
+			cursor: pointer;
+			width: 100%;
+			transition: all 0.3s ease;
+		}
+
+		.button__final:hover {
+			background-color: #333;
+		}
+
+		@media (max-width: 600px) {
+			.finaliza {
+				padding: 25px 20px;
+			}
+
+			.thanks {
+				font-size: 20px;
+			}
+
+			.subThanks {
+				font-size: 14px;
+			}
+
+			.img-sucess {
+				width: 65px;
+				height: 65px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="container-form">
+		<div class="finaliza" role="alert" aria-live="polite">
+			<img src="images/icon-complete.png" alt="Ícone de falha" class="img-sucess">
+			<h1 class="thanks">❌ Compra no cartão não foi realizada</h1>
+			<p class="subThanks">
+				Houve um problema ao processar seu pagamento com cartão.<br><br>
+				Por favor, clique no botão abaixo para continuar e escolher outra forma de pagamento.
+			</p>
+			<button class="button__final" onclick="window.location.href = '../payments04.html'">Continuar</button>
+		</div>
+	</section>
+</body>
+</html>

